@@ -1,4 +1,79 @@
 {
-  "categories": [],
-  "tools": []
+  "categories": [
+    { "slug": "notes", "name": "Notes" },
+    { "slug": "presentations", "name": "Presentations" },
+    { "slug": "ai-tools", "name": "AI tools" },
+    { "slug": "document-organisation", "name": "Document organisation" }
+  ],
+  "tools": [
+    {
+      "slug": "joplin",
+      "name": "Joplin",
+      "category": "notes",
+      "description": "Note-taking app that syncs across phone and laptop and keeps your notes private.",
+      "costLabel": "open-source",
+      "costLabelText": "Open-source",
+      "licence": "AGPL-3.0",
+      "officialRepo": "https://github.com/laurent22/joplin",
+      "lastUpdate": { "date": "2026-10-28", "detail": "v3.7.22, GitHub release" },
+      "safetyNote": "End-to-end encryption must be enabled manually for sync. Keep the encryption password safe: it cannot be recovered. Enable it on one device first, then sync the others rather than setting it up separately on every device.",
+      "replaces": "Evernote"
+    },
+    {
+      "slug": "siyuan",
+      "name": "SiYuan",
+      "category": "notes",
+      "description": "Note-taking app where you link ideas together and keep everything on your own device.",
+      "costLabel": "freemium",
+      "costLabelText": "Freemium / paid features",
+      "licence": "AGPL-3.0",
+      "officialRepo": "https://github.com/siyuan-note/siyuan",
+      "lastUpdate": { "date": "2026-11-10", "detail": "v3.8.10, GitHub release" },
+      "safetyNote": "Do not sync the live workspace using a normal third-party sync folder: the developers warn this can corrupt data. Keep the workspace outside the installation directory to avoid losing it during updates. If self-hosting, configure strong access authentication.",
+      "caution": "Worth keeping for advanced linked notes, but follow its workspace/sync rules and check paid-feature requirements before relying on it across devices.",
+      "replaces": "Notion"
+    },
+    {
+      "slug": "marp",
+      "name": "Marp",
+      "category": "presentations",
+      "description": "Lets you write slides in plain text (Markdown) and turn them into a slideshow.",
+      "costLabel": "open-source",
+      "costLabelText": "Open-source",
+      "licence": "MIT",
+      "officialRepo": "https://github.com/marp-team/marp",
+      "officialSite": "https://marp.app/",
+      "lastUpdate": { "date": "2026-09-06", "detail": "Marp CLI v4.5.1, GitHub release" },
+      "safetyNote": "Review exports; avoid untrusted embedded HTML/scripts.",
+      "replaces": "PowerPoint / Canva Pro, for basic presentations"
+    },
+    {
+      "slug": "jan",
+      "name": "Jan",
+      "category": "ai-tools",
+      "description": "Desktop app for downloading and chatting with AI models that can run fully offline.",
+      "costLabel": "open-source",
+      "costLabelText": "Open-source",
+      "licence": "Apache-2.0",
+      "officialRepo": "https://github.com/janhq/jan",
+      "officialSite": "https://jan.ai",
+      "lastUpdate": { "date": "2026-10-28", "detail": "v0.8.8, GitHub release" },
+      "safetyNote": "Local models need sufficient RAM; cloud mode sends prompts externally.",
+      "replaces": "ChatGPT"
+    },
+    {
+      "slug": "zotero",
+      "name": "Zotero",
+      "category": "document-organisation",
+      "description": "Collects, organises, annotates and cites your research sources and PDFs.",
+      "costLabel": "open-source",
+      "costLabelText": "Open-source",
+      "licence": "AGPL-3.0",
+      "officialRepo": "https://github.com/zotero/zotero",
+      "officialSite": "https://www.zotero.org",
+      "lastUpdate": { "date": "2026-11-09", "detail": "latest commit on GitHub" },
+      "safetyNote": "Check imported authors, titles and dates before submitting citations.",
+      "replaces": "EndNote / RefWorks, for reference management"
+    }
+  ]
 }
