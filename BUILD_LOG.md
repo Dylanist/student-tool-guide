@@ -31,3 +31,9 @@ This is my record of how I used AI (Claude Code) to build this site. Each stage 
 - **Built:** Marp CLI and Joplin guides with numbered steps, Tabs, Copy buttons, a Requirements toggle, Source links and screenshot placeholders.
 - **Checked:** the AI compared the commands with the official Marp and Node.js pages, then tested the toggle, tabs and Copy button locally.
 - **Changed:** the Linux steps for Joplin and Node.js link to the official pages, with no script in a copy box. Joplin's Linux command downloads and runs a script, which is what my Explainer warns about.
+
+## Stage 5: Hover grid and size check
+
+- **Built:** one Aceternity hover-effect grid on category pages, restyled to match shadcn/ui, with a plain fade.
+- **Checked:** the hover layer appears and goes away, no page scrolls sideways at phone width, and the build is 497 KB in total. The main page download is about 123 KB compressed (115 KB JavaScript, 7.5 KB CSS, 0.4 KB HTML).
+- **Changed:** the grid added 35 KB of compressed JavaScript, so it now loads only on category pages. I could not test the real clipboard or the reduced-motion setting in the AI's preview browser.
