@@ -18,7 +18,7 @@ This is my record of how I used AI (Claude Code) to build this site. Each stage 
 
 - **Built:** a GitHub Actions workflow using the official Pages actions.
 - **Checked:** the first run built the site but failed at publishing, with the message that Pages was not enabled. I set Settings > Pages > Source to GitHub Actions.
-- **Changed:** updated the actions to their newest versions after the first run gave a deprecation warning.
+- **Changed:** updated the actions to their newest versions after the first run gave a deprecation warning. Five runs failed because GitHub had not created the Pages site, even though Source showed GitHub Actions. Saving "Deploy from a branch" once and switching back to GitHub Actions created it.
 
 ## Stage 3: Tool data and pages
 
