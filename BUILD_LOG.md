@@ -37,3 +37,9 @@ This is my record of how I used AI (Claude Code) to build this site. Each stage 
 - **Built:** one Aceternity hover-effect grid on category pages, restyled to match shadcn/ui, with a plain fade.
 - **Checked:** the hover layer appears and goes away, no page scrolls sideways at phone width, and the build is 497 KB in total. The main page download is about 123 KB compressed (115 KB JavaScript, 7.5 KB CSS, 0.4 KB HTML).
 - **Changed:** the grid added 35 KB of compressed JavaScript, so it now loads only on category pages. I could not test the real clipboard or the reduced-motion setting in the AI's preview browser.
+
+## Stage 6: Live check
+
+- **Built:** nothing new. The first successful deploy put the site on GitHub Pages.
+- **Checked:** the AI opened Home, all 4 categories, all 5 tools and the Explainer on the live URL. Each showed the right heading and date, with no "last checked" field and no download-and-run script. A category with no tools shows "Page not found".
+- **Changed:** nothing. I still need to test the Copy button myself on the live site, and add the screenshots.
