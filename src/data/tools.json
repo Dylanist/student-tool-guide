@@ -17,7 +17,67 @@
       "officialRepo": "https://github.com/laurent22/joplin",
       "lastUpdate": { "date": "2026-10-28", "detail": "v3.7.22, GitHub release" },
       "safetyNote": "End-to-end encryption must be enabled manually for sync. Keep the encryption password safe: it cannot be recovered. Enable it on one device first, then sync the others rather than setting it up separately on every device.",
-      "replaces": "Evernote"
+      "replaces": "Evernote",
+      "guide": {
+        "title": "How to install Joplin",
+        "requirements": [
+          "A Windows or macOS computer. Joplin has a separate download for each.",
+          "No coding or self-hosting required."
+        ],
+        "requirementsGuide": {
+          "steps": [
+            { "text": "There is nothing else to install first. The Joplin installer is all you need." }
+          ]
+        },
+        "platforms": [
+          {
+            "os": "Windows",
+            "steps": [
+              {
+                "text": "Open Joplin's official install page.",
+                "link": { "label": "Joplin install page", "url": "https://joplinapp.org/help/install/" }
+              },
+              {
+                "text": "Find the Windows download and click the installer. Its file name starts with Joplin-Setup and ends in .exe.",
+                "screenshot": "the Windows download on Joplin's install page"
+              },
+              {
+                "text": "Open the downloaded file and follow the steps on screen.",
+                "screenshot": "the Joplin installer window"
+              }
+            ]
+          },
+          {
+            "os": "macOS",
+            "steps": [
+              {
+                "text": "Open Joplin's official install page.",
+                "link": { "label": "Joplin install page", "url": "https://joplinapp.org/help/install/" }
+              },
+              {
+                "text": "Find the macOS downloads. There are two .dmg files.",
+                "screenshot": "the macOS downloads on Joplin's install page"
+              },
+              { "text": "If your Mac has an Apple Silicon (M1) chip, download the file with arm64 in its name." },
+              { "text": "If your Mac does not have that chip, download the other .dmg file." },
+              {
+                "text": "Open the downloaded file and follow the steps on screen.",
+                "screenshot": "the opened Joplin .dmg window"
+              }
+            ]
+          },
+          {
+            "os": "Linux",
+            "steps": [
+              {
+                "text": "Please follow Joplin's official Linux instructions on its install page.",
+                "link": { "label": "Joplin install page", "url": "https://joplinapp.org/help/install/" }
+              }
+            ]
+          }
+        ],
+        "source": { "label": "Joplin install page (official docs)", "url": "https://joplinapp.org/help/install/" }
+      }
     },
     {
       "slug": "siyuan",
@@ -45,7 +105,96 @@
       "officialSite": "https://marp.app/",
       "lastUpdate": { "date": "2026-09-06", "detail": "Marp CLI v4.5.1, GitHub release" },
       "safetyNote": "Review exports; avoid untrusted embedded HTML/scripts.",
-      "replaces": "PowerPoint / Canva Pro, for basic presentations"
+      "replaces": "PowerPoint / Canva Pro, for basic presentations",
+      "guide": {
+        "title": "How to install Marp CLI",
+        "requirements": [
+          "\"Node.js v18 and later is required to use Marp CLI.\" (Marp CLI official docs)",
+          "Google Chrome, Microsoft Edge or Mozilla Firefox, if you want to make a PDF.",
+          "A terminal: PowerShell on Windows, or Terminal on macOS and Linux."
+        ],
+        "requirementsGuide": {
+          "platforms": [
+            {
+              "os": "Windows",
+              "steps": [
+                {
+                  "text": "Open the official Node.js download page.",
+                  "link": { "label": "Node.js downloads", "url": "https://nodejs.org/en/download" }
+                },
+                {
+                  "text": "In the section for a prebuilt Node.js, choose Windows, then click Windows Installer (.msi).",
+                  "screenshot": "the Windows Installer button on the Node.js page"
+                },
+                {
+                  "text": "Open the downloaded file and follow the steps on screen.",
+                  "screenshot": "the Node.js installer window"
+                },
+                {
+                  "text": "This command shows your Node.js version, which must be v18 or later. Open a new PowerShell window and run it there.",
+                  "command": "node -v"
+                },
+                {
+                  "text": "This command shows your npm version, so you know npm installed too. Run it in the same PowerShell window.",
+                  "command": "npm -v"
+                }
+              ]
+            },
+            {
+              "os": "macOS",
+              "steps": [
+                {
+                  "text": "Open the official Node.js download page.",
+                  "link": { "label": "Node.js downloads", "url": "https://nodejs.org/en/download" }
+                },
+                {
+                  "text": "In the section for a prebuilt Node.js, choose macOS, then click macOS Installer (.pkg).",
+                  "screenshot": "the macOS Installer button on the Node.js page"
+                },
+                {
+                  "text": "Open the downloaded file and follow the steps on screen.",
+                  "screenshot": "the Node.js installer window on a Mac"
+                },
+                {
+                  "text": "This command shows your Node.js version, which must be v18 or later. Open a new Terminal window and run it there.",
+                  "command": "node -v"
+                },
+                {
+                  "text": "This command shows your npm version, so you know npm installed too. Run it in the same Terminal window.",
+                  "command": "npm -v"
+                }
+              ]
+            },
+            {
+              "os": "Linux",
+              "steps": [
+                {
+                  "text": "Choose Linux on the official Node.js download page and follow the steps there.",
+                  "link": { "label": "Node.js downloads", "url": "https://nodejs.org/en/download" }
+                }
+              ]
+            }
+          ]
+        },
+        "steps": [
+          { "text": "Open your terminal: PowerShell on Windows, or Terminal on macOS and Linux." },
+          {
+            "text": "This command installs Marp CLI so you can use the marp command in any folder. Type it in your terminal and press Enter.",
+            "command": "npm install -g @marp-team/marp-cli"
+          },
+          { "text": "In a folder of your choice, create a plain-text file named slide-deck.md and write some Markdown in it." },
+          { "text": "In your terminal, go to that folder: type cd and a space, drag the folder into the terminal window, then press Enter." },
+          {
+            "text": "This command turns slide-deck.md into slide-deck.html in the same folder. Run it in your terminal, inside that folder.",
+            "command": "marp slide-deck.md"
+          },
+          {
+            "text": "This command makes a PDF of your slides, using one of the browsers listed under Requirements. Run it in the same place.",
+            "command": "marp --pdf slide-deck.md"
+          }
+        ],
+        "source": { "label": "Marp CLI README (official repo)", "url": "https://github.com/marp-team/marp-cli" }
+      }
     },
     {
       "slug": "jan",

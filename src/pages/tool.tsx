@@ -1,8 +1,9 @@
 import type { ReactNode } from "react"
-import { ExternalLink, ShieldAlert, TriangleAlert } from "lucide-react"
+import { ShieldAlert, TriangleAlert } from "lucide-react"
 import { Link, useParams } from "react-router-dom"
 
-import { CautionBadge, CostBadge } from "@/components/labels"
+import { InstallGuide } from "@/components/install-guide"
+import { CautionBadge, CostBadge, OutLink } from "@/components/labels"
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
 import { formatDate, getCategory, getTool } from "@/data"
 import { NotFoundPage } from "@/pages/not-found"
@@ -13,20 +14,6 @@ function Fact({ term, children }: { term: string; children: ReactNode }) {
       <dt className="text-sm font-medium">{term}</dt>
       <dd className="text-sm">{children}</dd>
     </div>
-  )
-}
-
-function OutLink({ href, children }: { href: string; children: ReactNode }) {
-  return (
-    <a
-      href={href}
-      target="_blank"
-      rel="noreferrer"
-      className="inline-flex items-center gap-1 underline underline-offset-4"
-    >
-      {children}
-      <ExternalLink aria-hidden="true" className="size-3" />
-    </a>
   )
 }
 
@@ -83,6 +70,8 @@ export function ToolPage() {
         <AlertTitle>Safety note</AlertTitle>
         <AlertDescription>{tool.safetyNote}</AlertDescription>
       </Alert>
+
+      {tool.guide && <InstallGuide guide={tool.guide} />}
     </article>
   )
 }

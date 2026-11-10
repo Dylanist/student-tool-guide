@@ -23,5 +23,11 @@ This is my record of how I used AI (Claude Code) to build this site. Each stage 
 ## Stage 3: Tool data and pages
 
 - **Built:** `src/data/tools.json` with 5 tools, and the Home, Category and Tool pages that read from it.
-- **Checked:** opened the pages locally and compared the wording with my spreadsheet. Every official link returned a working page.
+- **Checked:** the AI opened the pages locally and confirmed that every official link returned a working page. The wording was copied from my spreadsheet, and I still need to read it through myself.
 - **Changed:** "Last update" comes from each official GitHub repo, not my sheet. SiYuan, Jan and Zotero differ from my sheet, so the site shows GitHub's date.
+
+## Stage 4: Install guides
+
+- **Built:** Marp CLI and Joplin guides with numbered steps, Tabs, Copy buttons, a Requirements toggle, Source links and screenshot placeholders.
+- **Checked:** the AI compared the commands with the official Marp and Node.js pages, then tested the toggle, tabs and Copy button locally.
+- **Changed:** the Linux steps for Joplin and Node.js link to the official pages, with no script in a copy box. Joplin's Linux command downloads and runs a script, which is what my Explainer warns about.
