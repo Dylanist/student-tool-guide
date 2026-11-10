@@ -42,4 +42,4 @@ This is my record of how I used AI (Claude Code) to build this site. Each stage 
 
 - **Built:** nothing new. The first successful deploy put the site on GitHub Pages.
 - **Checked:** the AI opened Home, all 4 categories, all 5 tools and the Explainer on the live URL. Each showed the right heading and date, with no "last checked" field and no download-and-run script. A category with no tools shows "Page not found".
-- **Changed:** nothing. I still need to test the Copy button myself on the live site, and add the screenshots.
+- **Changed:** soon after that check the live site went blank, because Source was still on "Deploy from a branch" and GitHub published the raw files over the built site. I set Source back to GitHub Actions and the AI republished and checked again. I still need to test the Copy button myself on the live site, and add the screenshots.
