@@ -1,8 +1,13 @@
+import { lazy, Suspense } from "react"
 import { useParams } from "react-router-dom"
 
-import { ToolGrid } from "@/components/tool-grid"
 import { getCategory, getToolsInCategory } from "@/data"
 import { NotFoundPage } from "@/pages/not-found"
+
+// The hover animation is loaded only on category pages, so other pages stay small.
+const ToolGrid = lazy(() =>
+  import("@/components/tool-grid").then((module) => ({ default: module.ToolGrid })),
+)
 
 export function CategoryPage() {
   const { slug } = useParams()
@@ -21,7 +26,9 @@ export function CategoryPage() {
         </p>
       </div>
       {/* The search and filter controls can go here. */}
-      <ToolGrid items={items} />
+      <Suspense fallback={<p className="text-sm text-muted-foreground">Loading tools…</p>}>
+        <ToolGrid items={items} />
+      </Suspense>
     </div>
   )
 }

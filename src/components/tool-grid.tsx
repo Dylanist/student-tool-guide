@@ -1,14 +1,15 @@
-import { Link } from "react-router-dom"
-
 import { CautionBadge, CostBadge } from "@/components/labels"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { HoverEffect } from "@/components/ui/card-hover-effect"
 import { formatDate, type Tool } from "@/data"
 
 export function ToolGrid({ items }: { items: Tool[] }) {
   return (
-    <div className="grid gap-3 sm:grid-cols-2">
-      {items.map((tool) => (
-        <Link key={tool.slug} to={`/tool/${tool.slug}`} className="block rounded-xl">
+    <HoverEffect
+      className="-m-1.5"
+      items={items.map((tool) => ({
+        link: `/tool/${tool.slug}`,
+        children: (
           <Card size="sm" className="h-full">
             <CardHeader>
               <CardTitle>{tool.name}</CardTitle>
@@ -24,8 +25,8 @@ export function ToolGrid({ items }: { items: Tool[] }) {
               </p>
             </CardContent>
           </Card>
-        </Link>
-      ))}
-    </div>
+        ),
+      }))}
+    />
   )
 }
